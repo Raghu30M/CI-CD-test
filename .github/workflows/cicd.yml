@@ -2,9 +2,10 @@ name: App test and build
 on:
  workflow_dispatch:
 jobs:
- runs-on: ubuntu-latest
- steps: 
-   -name: test app
-    run: npm test
-   -name: build app
-    run: npm run build  
+  build-test-app:
+    runs-on: ubuntu-latest
+    steps: 
+      -name: test app
+        run: npm test
+      -name: build app
+        run: npm run build  
