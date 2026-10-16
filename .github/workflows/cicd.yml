@@ -1,12 +1,16 @@
 name: App test and build
 on:
- workflow_dispatch:
- 
+    push:
+        branches:
+            - main
+
 jobs:
-  build-test-app:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: test app
-        run: npm test
-      - name: build app
-        run: npm run build  
+    build-test-app:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v7
+            - name: build app
+              run: npm run build
+            - name: test app
+              run: npm test
