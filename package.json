@@ -1,0 +1,22 @@
+{
+  "name": "node-ci-cd",
+  "version": "1.0.0",
+  "description": "CI/CD pipeline test",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "node --test",
+    "build": "esbuild src/app.js --bundle --platform=node --packages=external --outfile=dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "eslint": "^10.12.0",
+    "supertest": "^7.3.1"
+  }
+}
